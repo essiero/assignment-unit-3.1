@@ -57,7 +57,7 @@ console.log('--- 4. Adding and removing array items ---');
 // Example: Add an animal to the end of an array using the Array.push method.
 let animalToPush = 'penguin';
 animalArray.push(animalToPush);
-console.log('Added an animal to end,', animalArray);
+console.log('Added an animal to end: ', animalArray);
 
 // 4.a. TODO: Create a variable `dessert` and assign it a string value of
 //      a dessert that you love.
@@ -77,7 +77,7 @@ console.log(`Added an animal to beginning: ${animalArray}`);
 //      Add the `entree` to the beginning of your `favoriteFoods` array.
 let entree = 'bun cha gio';
 favoriteFoods.unshift(entree);
-  console.log(favoriteFoods);
+  console.log('Added entree to beginning: ', favoriteFoods);
 
 // Example: Remove the last animal by using the Array.pop method.
 let removedAnimal = animalArray.pop();
@@ -94,7 +94,9 @@ let colors = ['orange', 'yellow', 'green', 'teal'];
 //      array only contains three items now, AND to verify that `lastColor`
 //      contains the value "teal".)
 
-
+let lastColor = colors.pop();
+  console.log('Removed the last color', lastColor);
+  console.log('The colors are now', colors)
 // Example: Remove the first animal using the Array.shift method.
 removedAnimal = animalArray.shift();
 console.log('Removed the first animal', removedAnimal);
@@ -104,7 +106,9 @@ console.log('The animals are now', animalArray);
 //      inside a new variable called `firstColor`.
 //      To verify that your code worked, console.log `firstColor`!  
 
-
+let firstColor = colors.shift();
+console.log('Removed the first color: ', firstColor);
+console.log('The colors are now: ', colors);
 
 
 // STRETCH GOALS:
@@ -113,11 +117,18 @@ let gems = ['Topaz', 'Citrine', 'Diamond', 'Emerald', 'Iolite', 'Tanzanite'];
 
 // 5.a (STRETCH) TODO: Replace the second gem with 'Tourmaline'.
 //      Remember to console.log the updated array.
+gems[1] = 'Tourmaline'
+console.log('Replaced citrine with tourmaline');
+console.log('Gems are now: ', gems);
 
 
 // 5.b (STRETCH) TODO: Sort your gems array in reverse alphabetical order.
 //     Please console.log the sorted array.
-
+gems.sort();
+console.log(gems);
+gems.reverse();
+console.log(gems);
+// thanks to the help from: https://careerkarma.com/blog/javascript-sort-array/#:~:text=JavaScript%20Array%20sort()%3A%20Sort%20in%20Reverse%20Order&text=If%20we%20sort%20a%20list,our%20array%20in%20descending%20order.&text=We%20first%20sort%20our%20list,names%20in%20descending%20order%20alphametically.
 
 // 5.c (STRETCH) TODO: Create a variable `gemString` and assign it a string value
 //     that's made up of each value from the `gems` array, but separated by the
@@ -127,14 +138,16 @@ let gems = ['Topaz', 'Citrine', 'Diamond', 'Emerald', 'Iolite', 'Tanzanite'];
 //     🔥 You'll need to research the .join Array method. 🔥
 //     Don't forget to console.log `gemString`...
 
-
+let gemString = gems.join(' and ');
+console.log(gemString);
 // 5.d (STRETCH) TODO: Make a new array `colorfulGems` that combines 
 //     the gems array with the colors array.
 //     It should look something like:
 //       ['Tourmaline', 'Topaz', 'Tanzanite', 'Iolite', 'Emerald', 'Diamond', 'yellow', 'green']
 //     Now, console.log the new array.
-
-
+const colorfulGems = gems.concat(colors);
+console.log(colorfulGems);
+// shoutout to the following for the info!: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
 
 
 // DO NOT MODIFY
